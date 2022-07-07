@@ -3,7 +3,7 @@
       class="left-sidebar"
       :class="
       Sidebar_drawer ? `show-sidebar bg-${SidebarColor}` : `bg-${SidebarColor}`
-    "
+      "
   >
     <div :class="`bg-${logoColor} navbar-header`">
       <LogoDark/>
@@ -16,38 +16,267 @@
     </div>
 
     <div class="scrlbar">
-      <ul class="nav flex-column mb-0">
-
+      <ul class="nav flex-column mb-0 pd-5">
         <b-dropdown
             variant="primary"
             id="dropdown-1"
-            text="AccountController"
-            class=""
+            text="Account Controller"
+            class="dropdown-text"
         >
-
           <b-dropdown-item>
-            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex">
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
               GET /account/{id}
             </router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex">GET /account/get/{accountNo}</router-link>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /account/get/{accountNo}
+            </router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex">POST /account/save
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /account/save
             </router-link>
           </b-dropdown-item>
         </b-dropdown>
+      </ul>
 
-        <!--        <template v-for="(route, i) in routes">
-                  &lt;!&ndash;-Single Menu &ndash;&gt;
-                  <li class="nav-item" :key="i" v-if="!route.childern && !route.header">
-                    <router-link :to="`${route.to}`" class="nav-link d-flex">
-                      <i :class="route.icon"></i>
-                      <span class="hide-text">{{ route.title }}</span>
-                    </router-link>
-                  </li>
-                </template>-->
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Authority Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /authority
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /authority/{code}
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              PUT /update/{authorityId}
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Contract Action Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /contract-action
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Contract Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /addNewContract
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /applyLs
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              DELETE /deleteContract
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              DELETE /delete/agreement
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /getContract
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /update/state
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              PUT /update/{contractId}
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Cpv Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save/query
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Eo Awarding Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save/query
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Exel Export Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /export
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Plan Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /change
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /migrate
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Program Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /{id}
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /like
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /save
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /update/{id}
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Supplier Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /name
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /taxpayerId
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              PUT /update
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
+      </ul>
+      <ul class="nav flex-column mb-0 pd-5">
+        <b-dropdown
+            variant="primary"
+            id="dropdown-1"
+            text="Tender Controller"
+            class="dropdown-text"
+        >
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /delete
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              GET /getTender
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link :to="'/ui-elements/alert'" class="nav-link d-flex href-text">
+              POST /makeTenderEditable
+            </router-link>
+          </b-dropdown-item>
+        </b-dropdown>
       </ul>
     </div>
   </aside>
@@ -82,4 +311,31 @@ export default {
 </script>
 
 <style>
+.dropdown-text {
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.dropdown-item {
+  padding: 1px;
+  width: 100%;
+}
+
+.dropdown-menu{
+  width: 100%;
+}
+
+.href-text{
+  color: #48A3EA;
+  font-family: inherit;
+}
+
+.href-text:hover{
+  color: #48A3EA;
+}
+
+.pd-5{
+  padding: 5px;
+}
 </style>

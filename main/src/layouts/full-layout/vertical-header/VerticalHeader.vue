@@ -1,19 +1,21 @@
 <template>
   <header class="topbar">
     <b-navbar
-      toggleable="lg"
-      :type="`${navbarColor == 'white' ? 'light' : 'dark'}`"
-      class="p-0"
-      :variant="navbarColor"
+        toggleable="lg"
+        :type="`${navbarColor == 'white' ? 'light' : 'dark'}`"
+        class="p-0"
+        :variant="navbarColor"
     >
       <div :class="`navbar-header d-block d-lg-none pl-3`">
-        <LogoDark v-if="navbarColor == 'white'" />
-        <LogoLight v-else />
+        <LogoDark v-if="navbarColor == 'white'"/>
+        <LogoLight v-else/>
       </div>
       <b-navbar-nav
-        ><b-nav-item @click="showMobileSidebar" class="d-block d-lg-none"
-          ><i class="mdi mdi-menu fs-3"></i></b-nav-item
-      ></b-navbar-nav>
+      >
+        <b-nav-item @click="showMobileSidebar" class="d-block d-lg-none"
+        ><i class="mdi mdi-menu fs-3"></i></b-nav-item
+        >
+      </b-navbar-nav>
       <!-- <b-navbar-toggle target="nav-collapse" class="mx-2 border-0"
         ><i class="mdi mdi-dots-horizontal"></i
       ></b-navbar-toggle> -->
@@ -49,10 +51,10 @@
             <!-- Using 'button-content' slot -->
             <template #button-content>
               <img
-                src="../../../assets/images/users/1.jpg"
-                alt="user"
-                class="rounded-circle"
-                width="31"
+                  src="../../../assets/images/teamUser.jpg"
+                  alt="user"
+                  class="rounded-circle"
+                  width="31"
               />
             </template>
             <b-dropdown-item href="#" class="d-flex align-items-center">
@@ -72,7 +74,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import {mapState} from "vuex";
 import LogoDark from "../logo-dark/LogoDark";
 import LogoLight from "../logo-light/LogoLight";
 
@@ -95,3 +97,17 @@ export default {
   },
 };
 </script>
+<style>
+#nav-collapse {
+  background-color: #33A8ED !important;
+}
+
+.bg-primary{
+  background-color: #33A8ED !important;
+}
+.btn-primary{
+  background-color: #33A8ED !important;
+  border-color: #33A8ED !important;;
+}
+
+</style>
